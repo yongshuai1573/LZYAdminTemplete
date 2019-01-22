@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_998932_594fl37jokb.css">
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/lists.css">
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <a href="#">
+                <img src="../img/lzy.png"/>
+            </a>
+        </div>
+        <div class="search">
+            <a href="#" ><i class="iconfont icon-caidan" style="font-size: 18px"></i></a>
+            <form id="search_form" >
+                <input type="text" value="search"
+                       onfocus="if(this.value == 'search'){this.value = ''; this.style.color ='#424242'}"
+                       onblur="if(this.value == ''){this.value = 'search';this.style.color = '#999'}">
+                <button><i class="iconfont icon-sousuo" style="color: #fff"></i></button>
+            </form>
+        </div>
+        <div class="custom-menu clearfix">
+            <ul>
+                <li class="user-name">
+                    <div class="user-name-pic"><img src="../img/timg.jpg" height="40" width="40"/></div>
+                    <div class="name">Joyce</div>
+                </li>
+                <li class="fullscreen lay-unselect"  layadmin-event="fullscreen"><i class="iconfont icon-quanping layui-icon layui-icon-screen-full" style="font-size: 16px"></i></li>
+                <li class="email">
+                    <i class="iconfont icon-cmstubiaozitihua15" style="font-size: 25px"></i>
+                </li>
+                <li class="notice">
+                    <i class="iconfont icon-tongzhi" style="font-size: 21px"></i>
+               </li>
+                <li class="setting">
+                    <i class="iconfont icon-she-zhi" style="font-size: 21px"></i>
+                </li>
+                <div class="elastic-frame">
+                <div class="dropdown-menu layui-anim layui-anim-scaleSpring first-frame" id="email-list" style="position: absolute;top: 70px;right: 146px;display: none">
+                    <ul>
+                        <li class="menu-list"><i class="iconfont icon-dengluming"></i><a href="">个人信息</a></li>
+                        <li class="menu-list"><i class="iconfont icon-78"></i><a href="">切换账号</a></li>
+                        <li class="menu-list"><i class="iconfont icon-mima"></i><a href="">修改密码</a></li>
+                        <li class="menu-list"><i class="iconfont icon-tuichu"></i><a href="">退出</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-menu layui-anim layui-anim-scaleSpring " id="notice-list" style="position: absolute;top: 70px;right: 88px;display: none">
+                    <ul>
+                        <li class="menu-list"><i class="iconfont icon-dengluming"></i><a href="">个人信息</a></li>
+                        <li class="menu-list"><i class="iconfont icon-78"></i><a href="">切换账号</a></li>
+                        <li class="menu-list"><i class="iconfont icon-mima"></i><a href="">修改密码</a></li>
+                        <li class="menu-list"><i class="iconfont icon-tuichu"></i><a href="">退出</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-menu layui-anim layui-anim-scaleSpring " id="setting-list" style="position: absolute;top: 70px;right: 35px;display: none">
+                    <ul>
+                        <li class="menu-list"><i class="iconfont icon-dengluming"></i><a href="">个人信息</a></li>
+                        <li class="menu-list"><i class="iconfont icon-78"></i><a href="">切换账号</a></li>
+                        <li class="menu-list"><i class="iconfont icon-mima"></i><a href="">修改密码</a></li>
+                        <li class="menu-list"><i class="iconfont icon-tuichu"></i><a href="">退出</a></li>
+                    </ul>
+                </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-box">
+            <div class="back-img">
+                <div class="user-pic">
+                    <img src="../img/timg.jpg" height="65" width="65"/>
+                </div>
+            </div>
+            <ul class="list">
+                <li class="header-left">PERSONAL</li>
+                <li class="active">
+                    <i class="iconfont icon-cmstubiaozitihua15"></i>Main Dashboard
+                    <i class="iconfont icon-down-trangle clearfix" style="float: right"></i>
+                    <ul class="inner-list" style="display: none">
+                        <li><a href="login.html">Login</a></li>
+                        <li>Dashboard 2</li>
+                    </ul>
+                </li>
+                <li class="header-left">PERSONAL</li>
+                <li class="active">
+                    <ul class="inner-list" style="display: none">
+                        <li></li>
+                        <li>Dashboard 2</li>
+                    </ul>
+                </li>
+                <li class="header-left">PERSONAL3</li>
+                <li class="active">
+                    <i class="iconfont icon-cmstubiaozitihua15"></i>Main Dashboard
+                    <i class="iconfont icon-down-trangle clearfix" style="float: right"></i>
+                    <ul class="inner-list" style="display: none">
+                        <li><a href="member.html">会员列表</a></li>
+                        <li><a href="Article-editor.html">文章编辑</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="page-title">
+            <h2>PERSONAL</h2>
+            <nav>
+                <ol >
+                    <li><a href="#"><i class="iconfont icon-cmstubiaozitihua15"></i></a></li>
+                    <li>Main Dashboard</li>
+                    <li>Dashboard1</li>
+                </ol>
+            </nav>
+        </div>
+        <h3 class="content-title">信息详情页</h3>
+        <ul class="memberlistul ">
+            <li class="memberlist clearfix">
+                <div class="memberlisticon"></div>
+                <div class="memberlistimg"><img src="../img/timg.jpg" alt=""></div>
+                <div class="memberlistdetail">
+                    <p class="memberlistdetailname">
+                        <span>会员姓名</span>
+                        <span>—</span>
+                        <span>会员昵称</span>
+                    </p>
+                    <p class="memberlistdetailcount">会员账号</p>
+                    <p>创建时间</p>
+                </div>
+                <div class="memberlistdetailmanage">
+                    <i class="layui-icon">&#xe601;</i>
+                    <i class="layui-icon">&#xe642;</i>
+                    <i class="layui-icon">&#xe631;</i>
+                    <i class="layui-icon">&#xe640;</i>
+                </div>
+            </li>
+            <li class="memberlist clearfix">
+                <div class="memberlisticon"></div>
+                <div class="memberlistimg"><img src="../img/timg.jpg" alt=""></div>
+                <div class="memberlistdetail">
+                    <p class="memberlistdetailname">
+                        <span>会员姓名</span>
+                        <span>—</span>
+                        <span>会员昵称</span>
+                    </p>
+                    <p class="memberlistdetailcount">会员账号</p>
+                    <p>创建时间</p>
+                </div>
+                <div class="memberlistdetailmanage">
+                    <i class="layui-icon">&#xe601;</i>
+                    <i class="layui-icon">&#xe642;</i>
+                    <i class="layui-icon">&#xe631;</i>
+                    <i class="layui-icon">&#xe640;</i>
+                </div>
+            </li>
+            <li class="memberlist clearfix">
+                <div class="memberlisticon"></div>
+                <div class="memberlistimg"><img src="../img/timg.jpg" alt=""></div>
+                <div class="memberlistdetail">
+                    <p class="memberlistdetailname">
+                        <span>会员姓名</span>
+                        <span>—</span>
+                        <span>会员昵称</span>
+                    </p>
+                    <p class="memberlistdetailcount">会员账号</p>
+                    <p>创建时间</p>
+                </div>
+                <div class="memberlistdetailmanage">
+                    <i class="layui-icon">&#xe601;</i>
+                    <i class="layui-icon">&#xe642;</i>
+                    <i class="layui-icon">&#xe631;</i>
+                    <i class="layui-icon">&#xe640;</i>
+                </div>
+            </li>
+            <li class="memberlist clearfix">
+                <div class="memberlisticon"></div>
+                <div class="memberlistimg"><img src="../img/timg.jpg" alt=""></div>
+                <div class="memberlistdetail">
+                    <p class="memberlistdetailname">
+                        <span>会员姓名</span>
+                        <span>—</span>
+                        <span>会员昵称</span>
+                    </p>
+                    <p class="memberlistdetailcount">会员账号</p>
+                    <p>创建时间</p>
+                </div>
+                <div class="memberlistdetailmanage">
+                    <i class="layui-icon">&#xe601;</i>
+                    <i class="layui-icon">&#xe642;</i>
+                    <i class="layui-icon">&#xe631;</i>
+                    <i class="layui-icon">&#xe640;</i>
+                </div>
+            </li>
+        </ul>
+        <div id="membercount"></div>
+    </div>
+</div>
+<script src="../lib/layui/layui.js"></script>
+<script>
+    var r = 0;
+    $('.active').click(function () {
+        r += 180;
+       $(this).children('.inner-list').toggle();
+       $(this).children('.icon-down-trangle').css('transform','rotate('+ r +'deg)');
+    });
+
+    layui.use(['form','upload','laypage'], function(){
+        var form = layui.form;
+        var upload = layui.upload;
+        var laypage = layui.laypage;
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field),{
+                icon:1,
+                time:1000  //设定等待时间
+            });
+            return false;
+        });
+        var uploadInst = upload.render({
+            elem: '#test2' //绑定元素
+            ,url: '/upload/' //上传接口
+            ,multiple: true
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
+                });
+            }
+            ,done: function(res){
+                //上传完毕
+            }
+        });
+        var $ = layui.jquery;
+        $(".memberlist").hover(function () {
+            $(this).children(".memberlistdetailmanage").show();
+        },function () {
+            $(this).children(".memberlistdetailmanage").hide();
+        })
+        laypage.render({
+            elem: 'membercount' //分页容器的id
+            ,count: 100 //总页数
+            ,skin: ' #3E8EF7' //自定义选中色值
+            ,theme: '#3E8EF7'
+        });
+    });
+
+
+        if( $('#demo2').children('img').length>0){
+              $('.mask-layer').show(function () {
+                $('#demo2').mouseenter(function () {
+                    $(this).find('.mask-layer').animate({'top':'0','opacity':'0.8'});
+                });
+                $('#demo2').mouseleave(function () {
+                    $(this).find('.mask-layer').animate({'top':'-20px','opacity':'0'});
+                });
+            })}
+        else{
+            $('.mask-layer').hide()
+        }
+
+
+
+    $('.email').click(function (){
+    $('#email-list').toggle().siblings().hide();
+    });
+    $('.notice').click(function (){
+        $('#notice-list').toggle().siblings().hide();
+    });
+    $('.setting').click(function (){
+        $('#setting-list').toggle().siblings().hide();
+    });
+
+
+
+</script>
+</body>
+</html>

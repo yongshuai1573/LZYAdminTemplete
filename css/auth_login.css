@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #666;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url("../img/5000777842.jpg");
+}
+.wrapper{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.wrapper .wrapper-content{
+    width: 40%;
+    height:80%;
+    position: absolute;
+    top:20%
+}
+.wrapper .wrapper-content .slogan{
+    text-align: center;
+}
+.wrapper .wrapper-content .slogan>h2{
+    color: #FF9B00;
+    margin: 8px 0;
+    letter-spacing: 1px;
+}
+.wrapper .wrapper-content .slogan>h5{
+    color: #fff;
+    letter-spacing: 1px;
+}
+.wrapper .wrapper-content .information{
+    width: 80%;
+    background:rgba(0,0,0,0.5);
+    height:auto;
+    margin-top: 18px;
+    padding: 30px;
+}
+.wrapper .wrapper-content .information form .form-group{
+    border-bottom: solid 1px #fff;
+}
+.wrapper .wrapper-content .information form .form-group .input-group-prepend{
+    display: inline-block;
+}
+.wrapper .wrapper-content .information form .form-group .input-group-prepend .input-group-text i{
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+.wrapper .wrapper-content .information form .form-group input{
+    width: 90%;
+    line-height: 3;
+    background-color: transparent;
+    margin: 8px 0;
+    border: none;
+    color: #fff;
+}
+.wrapper .wrapper-content .information form .row .col-12 input[type="checkbox"] + label::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 2px solid #5a5a5a;
+    margin-top: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.wrapper .wrapper-content .information form .row .col-12 input[type="checkbox"]:checked + label::before {
+    content: '\2713';
+    text-align: center;
+    color: #fff;
+    line-height: 16px;
+}
+.wrapper .wrapper-content .information form .row .col-12 label{
+    margin-left: 16px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+}
+.wrapper .wrapper-content .information form .row .col-12 label b{
+    color: #FF9B00;
+}
+.col-12{
+    margin: 25px 0;
+}
+.col-12>button{
+    width: 100%;
+    height: 35px;
+    background-color: #3E8EF7;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.wrapper .wrapper-content .information form .row .text-center p{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+}
+.wrapper .wrapper-content .information form .row .text-center p>a{
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+    margin-left: 6px;
+}

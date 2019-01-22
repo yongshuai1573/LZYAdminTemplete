@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_998932_594fl37jokb.css">
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/lists.css">
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <a href="#">
+                <img src="../img/lzy.png"/>
+            </a>
+        </div>
+        <div class="search">
+            <a href="#" ><i class="iconfont icon-caidan" style="font-size: 18px"></i></a>
+            <form id="search_form" >
+                <input type="text" value="search"
+                       onfocus="if(this.value == 'search'){this.value = ''; this.style.color ='#424242'}"
+                       onblur="if(this.value == ''){this.value = 'search';this.style.color = '#999'}">
+                <button><i class="iconfont icon-sousuo" style="color: #fff"></i></button>
+            </form>
+        </div>
+        <div class="custom-menu clearfix">
+            <ul>
+                <li class="user-name">
+                    <div class="user-name-pic"><img src="../img/timg.jpg" height="40" width="40"/></div>
+                    <div class="name">Joyce</div>
+                </li>
+                <li class="fullscreen lay-unselect"  layadmin-event="fullscreen"><i class="iconfont icon-quanping layui-icon layui-icon-screen-full" style="font-size: 16px"></i></li>
+                <li class="email">
+                    <i class="iconfont icon-cmstubiaozitihua15" style="font-size: 25px"></i>
+                </li>
+                <li class="notice">
+                    <i class="iconfont icon-tongzhi" style="font-size: 21px"></i>
+                </li>
+                <li class="setting">
+                    <i class="iconfont icon-she-zhi" style="font-size: 21px"></i>
+                </li>
+                <div class="elastic-frame">
+                    <div class="dropdown-menu layui-anim layui-anim-scaleSpring first-frame" id="email-list" style="position: absolute;top: 70px;right: 146px;display: none">
+                        <ul>
+                            <li class="menu-list"><i class="iconfont icon-dengluming"></i><a href="">个人信息</a></li>
+                            <li class="menu-list"><i class="iconfont icon-78"></i><a href="">切换账号</a></li>
+                            <li class="menu-list"><i class="iconfont icon-mima"></i><a href="">修改密码</a></li>
+                            <li class="menu-list"><i class="iconfont icon-tuichu"></i><a href="">退出</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-menu layui-anim layui-anim-scaleSpring " id="notice-list" style="position: absolute;top: 70px;right: 88px;display: none">
+                        <ul>
+                            <li class="menu-list"><i class="iconfont icon-dengluming"></i><a href="">个人信息</a></li>
+                            <li class="menu-list"><i class="iconfont icon-78"></i><a href="">切换账号</a></li>
+                            <li class="menu-list"><i class="iconfont icon-mima"></i><a href="">修改密码</a></li>
+                            <li class="menu-list"><i class="iconfont icon-tuichu"></i><a href="">退出</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-menu layui-anim layui-anim-scaleSpring " id="setting-list" style="position: absolute;top: 70px;right: 35px;display: none">
+                        <ul>
+                            <li class="menu-list"><i class="iconfont icon-dengluming"></i><a href="">个人信息</a></li>
+                            <li class="menu-list"><i class="iconfont icon-78"></i><a href="">切换账号</a></li>
+                            <li class="menu-list"><i class="iconfont icon-mima"></i><a href="">修改密码</a></li>
+                            <li class="menu-list"><i class="iconfont icon-tuichu"></i><a href="">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-box">
+            <div class="back-img">
+                <div class="user-pic">
+                    <img src="../img/timg.jpg" height="65" width="65"/>
+                </div>
+            </div>
+            <ul class="list">
+                <li class="header-left">PERSONAL</li>
+                <li class="active">
+                    <i class="iconfont icon-cmstubiaozitihua15"></i>Main Dashboard
+                    <i class="iconfont icon-down-trangle clearfix" style="float: right"></i>
+                    <ul class="inner-list" style="display: none">
+                        <li><a href="login.html">Login</a></li>
+                        <li>Dashboard 2</li>
+                    </ul>
+                </li>
+                <li class="header-left">PERSONAL</li>
+                <li class="active">
+                    <ul class="inner-list" style="display: none">
+                        <li></li>
+                        <li>Dashboard 2</li>
+                    </ul>
+                </li>
+                <li class="header-left">PERSONAL3</li>
+                <li class="active">
+                    <i class="iconfont icon-cmstubiaozitihua15"></i>Main Dashboard
+                    <i class="iconfont icon-down-trangle clearfix" style="float: right"></i>
+                    <ul class="inner-list" style="display: none">
+                        <li><a href="member.html">会员列表</a></li>
+                        <li><a href="Article-editor.html">文章编辑</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content clearfix">
+    <div style="  background-color:#fff; padding-bottom: 20px;">
+        <div class="page-title">
+            <h2>PERSONAL</h2>
+            <nav>
+                <ol >
+                    <li><a href="#"><i class="iconfont icon-cmstubiaozitihua15"></i></a></li>
+                    <li>Main Dashboard</li>
+                    <li>Dashboard1</li>
+                </ol>
+            </nav>
+        </div>
+        <h3 class="content-title">信息详情页</h3>
+        <div class="weadmin-body" style="width:92%;">
+            <div class="layui-row">
+                <form class="layui-form layui-col-md12 we-search" style="margin-top: 8px">
+                    会员搜索：
+                    <div class="layui-inline">
+                        <input class="layui-input" placeholder="开始日" name="start" id="start">
+                    </div>
+                    <div class="layui-inline">
+                        <input class="layui-input" placeholder="截止日" name="end" id="end">
+                    </div>
+                    <div class="layui-inline">
+                        <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                    <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                </form>
+            </div>
+            <div class="weadmin-block">
+                <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+                <button class="layui-btn" onclick="WeAdminShow('添加用户','./add.html',600,400)"><i class="layui-icon"></i>添加</button>
+                <span class="fr" style="line-height:40px">共有数据：88 条</span>
+            </div>
+            <table class="layui-table" id="memberList">
+                <thead>
+                <tr>
+                    <th>
+                        <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
+                    </th>
+                    <th>ID</th>
+                    <th>用户名</th>
+                    <th>性别</th>
+                    <th>手机</th>
+                    <th>邮箱</th>
+                    <th>地址</th>
+                    <th>加入时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-id="1">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id="1"><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>1</td>
+                    <td>小张</td>
+                    <td>男</td>
+                    <td>17600000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 1, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="3">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="3">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="2">
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>2</td>
+                    <td>小明</td>
+                    <td>女</td>
+                    <td>13000000000</td>
+                    <td>admin@mail.com</td>
+                    <td>北京市 海淀区</td>
+                    <td>2017-01-01 11:11:42</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe601;</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr data-id="3">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="3">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="3">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="3">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-id="2">
+                  <td>
+                    <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+                  </td>
+                  <td>2</td>
+                  <td>小明</td>
+                  <td>女</td>
+                  <td>13000000000</td>
+                  <td>admin@mail.com</td>
+                  <td>北京市 海淀区</td>
+                  <td>2017-01-01 11:11:42</td>
+                  <td class="td-status">
+                    <span class="layui-btn layui-btn-normal layui-btn-xs">已启用</span></td>
+                  <td class="td-manage">
+                    <a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+                      <i class="layui-icon">&#xe601;</i>
+                    </a>
+                    <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 2, 600, 400)" href="javascript:;">
+                      <i class="layui-icon">&#xe642;</i>
+                    </a>
+                    <a onclick="WeAdminShow('修改密码','./password.html',600,400)" title="修改密码" href="javascript:;">
+                      <i class="layui-icon">&#xe631;</i>
+                    </a>
+                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                      <i class="layui-icon">&#xe640;</i>
+                    </a>
+                  </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div id="pageDemo"></div>
+        </div>
+    </div>
+    </div>
+</div>
+<script src="../lib/layui/layui.js"></script>
+<script>
+    var r = 0;
+    $('.active').click(function () {
+        r += 180;
+        $(this).children('.inner-list').toggle();
+        $(this).children('.icon-down-trangle').css('transform','rotate('+ r +'deg)');
+    });
+
+    layui.use(['form','upload'], function(){
+        var form = layui.form;
+        var upload = layui.upload;
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field),{
+                icon:1,
+                time:1000  //设定等待时间
+            });
+            return false;
+        });
+        var uploadInst = upload.render({
+            elem: '#test2' //绑定元素
+            ,url: '/upload/' //上传接口
+            ,multiple: true
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
+                });
+            }
+            ,done: function(res){
+                //上传完毕
+            }
+        });
+    });
+
+
+    if( $('#demo2').children('img').length>0){
+        $('.mask-layer').show(function () {
+            $('#demo2').mouseenter(function () {
+                $(this).find('.mask-layer').animate({'top':'0','opacity':'0.8'});
+            });
+            $('#demo2').mouseleave(function () {
+                $(this).find('.mask-layer').animate({'top':'-20px','opacity':'0'});
+            });
+        })}
+    else{
+        $('.mask-layer').hide()
+    }
+
+    $('.fullscreen').click(function () {
+
+    });
+
+
+    $('.email').click(function (){
+        $('#email-list').toggle().siblings().hide();
+    });
+    $('.notice').click(function (){
+        $('#notice-list').toggle().siblings().hide();
+    });
+    $('.setting').click(function (){
+        $('#setting-list').toggle().siblings().hide();
+    });
+
+    layui.use('layedit', function(){
+        var layedit = layui.layedit;
+        layedit.build('demo'); //建立编辑器
+    });
+
+    function WeAdminEdit() {
+        window.location.href='edit.html'
+    }
+</script>
+</body>
+</html>

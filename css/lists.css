@@ -1,0 +1,96 @@
+
+.weadmin-body {
+  padding-left: 66px;
+}
+
+.we-search {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.weadmin-block {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 22px;
+  background-color: rgb(242, 242, 242);
+  padding: 5px;
+  border-radius: 0px 2px 2px 0px;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.weadmin-block .layui-icon {
+  color: #fff;
+}
+
+.layui-btn {
+  background-color: #3E8EF7;
+}
+
+.layui-btn-danger {
+  background-color: #FF5722;
+}
+
+.layui-btn .layui-icon {
+  color: #fff;
+}
+
+.memberlisticon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF5722;
+}
+
+.memberlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #F6F6F6;
+  padding: 20px 20px 20px 66px;
+  position: relative;
+}
+
+.memberlistimg img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.memberlistdetailname {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.memberlistdetailname span {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.memberlistdetailcount {
+  margin-top: 3px;
+  margin-bottom: 6px;
+}
+
+.memberlistdetail {
+  font-size: 12px;
+}
+
+.memberlistdetailname span:nth-child(2) {
+  margin-right: 5px;
+  margin-left: 6px;
+}
+.memberlistdetailmanage{position: absolute;top:45px;right: 45px;cursor: pointer;display: none}
+#membercount{padding-left: 30px;margin-top: 30px;}
+.layui-laypage a, .layui-laypage span{height: 40px;line-height: 40px;padding: 0 20px;}
+.layui-btn{border-radius: 4px;}
