@@ -125,13 +125,10 @@ html, body {
     margin-right: 14px;
     font-size: 20px;
 }
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  height: 0;
-  font-size: 0;
+.clearfix::after, .clearfix::before{
+    content: "";
+    clear: both;
+    display: block;
 }
 .wrapper .sidebar {
     position: absolute;
@@ -187,10 +184,15 @@ html, body {
 .wrapper .content{
     width: 83.4%;
     min-height: 800px;
- padding-bottom: 50px;
+    padding-bottom: 50px;
     margin-top:30px;
     margin-left: 290px;
 }
+.wrapper .content .content-back{
+    background-color:#fff;
+    padding-bottom: 20px;
+}
+
 .wrapper .content .page-title{
     height: 44px;
     padding: 15px 0 15px 40px;
