@@ -3,6 +3,13 @@ tableCheck = {
     $(".layui-form-checkbox").click(function(event) {
       if($(this).hasClass('layui-form-checked')) {
         $(this).removeClass('layui-form-checked');
+        var header={}
+        $.each($(".layui-form-checkbox"),function(i,val){
+          if(i==0){
+            header=val;
+          }
+        });
+        $(header).removeClass('layui-form-checked');
         if($(this).hasClass('header')) {
           $(".layui-form-checkbox").removeClass('layui-form-checked');
         }

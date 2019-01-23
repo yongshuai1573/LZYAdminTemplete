@@ -20,7 +20,7 @@ html, body {
     min-height: 100%;
 }
 
-.wrapper .header {
+.wrapper>.header {
     position: relative;
     z-index: 820;
     width: 100%;
@@ -28,7 +28,7 @@ html, body {
     background-color: #272B34;
 }
 
-.wrapper .header .logo {
+.wrapper>.header .logo {
     width: 260px;
     height: 70px;
     display: inline-block;
@@ -36,18 +36,18 @@ html, body {
     text-align: center;
 }
 
-.wrapper .header .logo img {
+.wrapper>.header .logo img {
     height: 55px;
     margin: 0 auto;
     vertical-align: middle;
 }
-.wrapper .header .search{
+.wrapper>.header .search{
     width: 500px;
     height: 40px;
     display: inline-block;
     vertical-align: middle;
 }
-.wrapper .header .search a{
+.wrapper>.header .search a{
     float: left;
     line-height: 40px;
 }
@@ -55,7 +55,7 @@ html, body {
     float: left;
     margin-left: 24px;
 }
-.wrapper .header .search .align-left{
+.wrapper>.header .search .align-left{
     display:inline-block;
     width: 30px;
     height: 70px;
