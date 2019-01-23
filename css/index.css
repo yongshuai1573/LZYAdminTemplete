@@ -225,7 +225,7 @@ html, body {
     margin-top: 30px;
 }
 .add-demo{
-    position: relative;
+
     display: inline-block;
 }
 .wrapper .content .layui-upload-list #demo2 .add-demo .mask-layer{
