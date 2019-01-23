@@ -591,6 +591,7 @@
     </div>
 </div>
 <script src="../lib/layui/layui.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
 <script>
     var r = 0;
     $('.active').click(function () {
@@ -599,32 +600,54 @@
         $(this).children('.icon-down-trangle').css('transform','rotate('+ r +'deg)');
     });
 
-    layui.use(['form','upload'], function(){
-        var form = layui.form;
-        var upload = layui.upload;
-        //监听提交
-        form.on('submit(formDemo)', function(data){
-            layer.msg(JSON.stringify(data.field),{
-                icon:1,
-                time:1000  //设定等待时间
-            });
-            return false;
-        });
-        var uploadInst = upload.render({
-            elem: '#test2' //绑定元素
-            ,url: '/upload/' //上传接口
-            ,multiple: true
-            ,before: function(obj){
-                //预读本地文件示例，不支持ie8
-                obj.preview(function(index, file, result){
-                    $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
-                });
-            }
-            ,done: function(res){
-                //上传完毕
-            }
-        });
+    layui.use(['laydate', 'jquery', 'table','laypage'], function(){
+      var laydate = layui.laydate,
+        $ = layui.jquery;
+      //执行一个laydate实例
+      laydate.render({
+        elem: '#start' //指定元素
+      });
+      //执行一个laydate实例
+      laydate.render({
+        elem: '#end' //指定元素
+      });
+      var table = layui.table;
+      layui.$.support.cors = true; //允许ajax跨域
+      //第一个实例
+      table.render({
+        elem: '#demo'
+        ,height: 312
+        ,url: 'https://www.layui.com/demo/table/user/?page=1&limit=30' //数据接口
+        ,page: true
+        ,
+        response:{statusCode:200}
+        ,cols: [[ //表头
+          {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
+          ,{field: 'username', title: '用户名', width:80}
+          ,{field: 'sex', title: '性别', width:80, sort: true}
+          ,{field: 'city', title: '城市', width:80}
+          ,{field: 'sign', title: '签名', width: 177}
+          ,{field: 'experience', title: '积分', width: 80, sort: true}
+          ,{field: 'score', title: '评分', width: 80, sort: true}
+          ,{field: 'classify', title: '职业', width: 80}
+          ,{field: 'wealth', title: '财富', width: 135, sort: true}
+        ]],
+        limit:5
+      });
+//      laypage.render({
+//        elem: 'pageDemo' //分页容器的id
+//        ,count: 20 //总页数,
+//
+//        ,skin: '#1E9FFF' //自定义选中色值
+//        //,skip: true //开启跳页
+//        ,jump: function(obj, first){
+//          if(!first){
+//            layer.msg('第'+ obj.curr +'页', {offset: 'b'});
+//          }
+//        }
+//      });
     });
+
 
 
     if( $('#demo2').children('img').length>0){
