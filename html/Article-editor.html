@@ -212,18 +212,14 @@
     });
 
 
-        if( $('#demo2').children('img').length>0){
-              $('.mask-layer').show(function () {
+
                 $('#demo2').mouseenter(function () {
                     $(this).find('.mask-layer').animate({'top':'0','opacity':'0.8'});
                 });
                 $('#demo2').mouseleave(function () {
                     $(this).find('.mask-layer').animate({'top':'-20px','opacity':'0'});
                 });
-            })}
-        else{
-            $('.mask-layer').hide()
-        }
+
 
 $('.fullscreen').click(function () {
 
