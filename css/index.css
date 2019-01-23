@@ -224,10 +224,11 @@ html, body {
 .wrapper .content .layui-form{
     margin-top: 30px;
 }
-.layui-upload-list{
+.add-demo{
     position: relative;
+    display: inline-block;
 }
-.wrapper .content .layui-upload-list .upload-img .mask-layer{
+.wrapper .content .layui-upload-list #demo2 .add-demo .mask-layer{
     width: 100px;
     height: 20px;
     background-color: #666;
@@ -238,6 +239,14 @@ html, body {
     position: absolute;
     top: -20px;
     left:0;
+}
+.wrapper .content .layui-upload-list .upload-img .mask-layer>i{
+    background-image: url("../img/del.png");
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 20px;
+    margin-left: 80px;
 }
 .wrapper .content .layui-upload-list .upload-img img{
     width: 100px;

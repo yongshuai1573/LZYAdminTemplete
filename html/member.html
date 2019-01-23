@@ -5,7 +5,7 @@
     <title>会员</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
     <link rel="stylesheet" href="../css/lists.css">
     <script src="../js/jquery-3.3.1.js"></script>
 </head>
@@ -203,82 +203,6 @@
     </div>
 </div>
 <script src="../lib/layui/layui.js"></script>
-<script>
-    var r = 0;
-    $('.active').click(function () {
-        r += 180;
-       $(this).children('.inner-list').toggle();
-       $(this).children('.icon-down-trangle').css('transform','rotate('+ r +'deg)');
-    });
-
-    layui.use(['form','upload','laypage'], function(){
-        var form = layui.form;
-        var upload = layui.upload;
-        var laypage = layui.laypage;
-        //监听提交
-        form.on('submit(formDemo)', function(data){
-            layer.msg(JSON.stringify(data.field),{
-                icon:1,
-                time:1000  //设定等待时间
-            });
-            return false;
-        });
-        var uploadInst = upload.render({
-            elem: '#test2' //绑定元素
-            ,url: '/upload/' //上传接口
-            ,multiple: true
-            ,before: function(obj){
-                //预读本地文件示例，不支持ie8
-                obj.preview(function(index, file, result){
-                    $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
-                });
-            }
-            ,done: function(res){
-                //上传完毕
-            }
-        });
-        var $ = layui.jquery;
-        $(".memberlist").hover(function () {
-            $(this).children(".memberlistdetailmanage").show();
-        },function () {
-            $(this).children(".memberlistdetailmanage").hide();
-        })
-        laypage.render({
-            elem: 'membercount' //分页容器的id
-            ,count: 100 //总页数
-            ,skin: ' #3E8EF7' //自定义选中色值
-            ,theme: '#3E8EF7'
-        });
-    });
-
-
-        if( $('#demo2').children('img').length>0){
-              $('.mask-layer').show(function () {
-                $('#demo2').mouseenter(function () {
-                    $(this).find('.mask-layer').animate({'top':'0','opacity':'0.8'});
-                });
-                $('#demo2').mouseleave(function () {
-                    $(this).find('.mask-layer').animate({'top':'-20px','opacity':'0'});
-                });
-            })}
-        else{
-            $('.mask-layer').hide()
-        }
-
-
-
-    $('.email').click(function (){
-    $('#email-list').toggle().siblings().hide();
-    });
-    $('.notice').click(function (){
-        $('#notice-list').toggle().siblings().hide();
-    });
-    $('.setting').click(function (){
-        $('#setting-list').toggle().siblings().hide();
-    });
-
-
-
-</script>
+<script src="../js/public.js"></script>
 </body>
 </html>

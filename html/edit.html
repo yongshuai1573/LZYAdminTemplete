@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>编辑</title>
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="../lib/layui/css/layui.css">
-  <link rel="stylesheet" href="../css/lists.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/lists.css">
     <script src="../js/jquery-3.3.1.js"></script>
 </head>
 <body>
@@ -159,9 +159,7 @@
                 <blockquote class="layui-elem-quote layui-quote-nm" style="margin: 10px 0 0 110px ;">
                     预览图：
                     <div class="layui-upload-list"  >
-                        <div class="upload-img" id="demo2">
-                            <div class="mask-layer"></div>
-                        </div>
+                        <div class="upload-img" id="demo2"></div>
                     </div>
                 </blockquote>
                 <button type="button" class="layui-btn" id="test2" style="margin: 16px 0 20px 110px">多图片上传</button>
@@ -184,72 +182,6 @@
     </div>
 </div>
 <script src="../lib/layui/layui.js"></script>
-<script>
-    var r = 0;
-    $('.active').click(function () {
-        r += 180;
-       $(this).children('.inner-list').toggle();
-       $(this).children('.icon-down-trangle').css('transform','rotate('+ r +'deg)');
-    });
-
-    layui.use(['form','upload'], function(){
-        var form = layui.form;
-        var upload = layui.upload;
-        //监听提交
-        form.on('submit(formDemo)', function(data){
-            layer.msg(JSON.stringify(data.field),{
-                icon:1,
-                time:1000  //设定等待时间
-            });
-            return false;
-        });
-        var uploadInst = upload.render({
-            elem: '#test2' //绑定元素
-            ,url: '/upload/' //上传接口
-            ,multiple: true
-            ,before: function(obj){
-                //预读本地文件示例，不支持ie8
-                obj.preview(function(index, file, result){
-                    $('#demo2').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img">')
-                });
-            }
-            ,done: function(res){
-                //上传完毕
-            }
-        });
-    });
-
-
-        if( $('#demo2').children('img').length>0){
-              $('.mask-layer').show(function () {
-                $('#demo2').mouseenter(function () {
-                    $(this).find('.mask-layer').animate({'top':'0','opacity':'0.8'});
-                });
-                $('#demo2').mouseleave(function () {
-                    $(this).find('.mask-layer').animate({'top':'-20px','opacity':'0'});
-                });
-            })}
-        else{
-            $('.mask-layer').hide()
-        }
-
-$('.fullscreen').click(function () {
-
-});
-
-
-    $('.email').click(function (){
-    $('#email-list').toggle().siblings().hide();
-    });
-    $('.notice').click(function (){
-        $('#notice-list').toggle().siblings().hide();
-    });
-    $('.setting').click(function (){
-        $('#setting-list').toggle().siblings().hide();
-    });
-
-
-
-</script>
+<script src="../js/public.js"></script>
 </body>
 </html>
