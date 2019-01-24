@@ -173,7 +173,12 @@ html, body {
 .wrapper .sidebar .list .iconfont{
     color: #999;
 }
-
+.wrapper .sidebar .list li .inner-list{
+    width: 260px;
+    margin-left: -28px;
+    padding-left: 42px;
+    background-color: rgba(255,255,255,0.05);
+}
 .wrapper .sidebar .list li .inner-list>li{
     line-height: 8px;
 }
@@ -225,7 +230,7 @@ html, body {
     margin-top: 30px;
 }
 .add-demo{
-
+    position: relative;
     display: inline-block;
 }
 .wrapper .content .layui-upload-list #demo2 .add-demo .mask-layer{
