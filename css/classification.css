@@ -1,0 +1,58 @@
+.wrapper .content .content-back .classify{
+    width: 91.5%;
+    border: solid 1px #ddd;
+    border-radius: 8px;
+    margin: 20px 0 0 60px;
+}
+.wrapper .content .content-back .classify .classify-list .classify-header p{
+    width: 98%;
+    border-bottom: solid 1px #ddd;
+    line-height: 45px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+.wrapper .content .content-back .classify .classify-list .classify-header>p>i{
+    position: absolute;
+    font-size: 14px;
+    color: #666;
+    right: 20px;
+    transition: all 0.3s;
+}
+.active>p{
+    background-color: #3E8EF7;
+    color: #fff;
+}
+.active>p>i{
+    color: #fff!important;
+    transform: rotate(180deg);
+}
+.wrapper .content .content-back .classify .classify-list .classify-header .detailed{
+    display: none;
+}
+.wrapper .content .content-back .classify .classify-list .classify-header .detailed .brands{
+    display: block;
+    position:relative;
+}
+.wrapper .content .content-back .classify .classify-list .classify-header .detailed .brands .brand-name>i{
+    font-size: 14px;
+    position: absolute;
+    color: #666;
+}
+.classify-header .detailed .brands .brand-name>i:nth-child(1){
+    right: 25px;
+}
+.classify-header .detailed .brands .brand-name>i:nth-child(2){
+    right: 55px;
+}
+.wrapper .content .content-back .classify .classify-list .classify-header .detailed .brands .brand-name{
+    display: block;
+    width: 97%;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 30px;
+    border-bottom: solid 1px #ddd;
+}

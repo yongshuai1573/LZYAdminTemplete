@@ -196,6 +196,7 @@ html, body {
 .wrapper .content .content-back{
     background-color:#fff;
     padding-bottom: 20px;
+    height: 800px;
 }
 
 .wrapper .content .page-title{
